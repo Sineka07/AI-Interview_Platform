@@ -1,0 +1,13 @@
+{
+  "name": "ai-interview-platform-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered mock interview and evaluation platform",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "cd backend && mvn spring-boot:run -Dspring-boot.run.profiles=h2",
+    "start": "npm --prefix frontend run dev"
+  }
+}

@@ -1,0 +1,30 @@
+2026-09-10 14:05:24.785375+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
+SELECT @@character_set_database, @@sql_mode [42001-224]
+2026-09-10 14:05:26.798366+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table interview_questions (id bigint not null auto_increment, category varchar(255), difficulty varchar(255), ideal_answer LONGTEXT, order_index integer, question_text TEXT not null, interview_id bigint not null, primary key (id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table interview_questions (id bigint not null auto_increment, category varchar(255), difficulty varchar(255), ideal_answer LONGTEXT, order_index integer, question_text TEXT not null, interview_id bigint not null, primary key (id)) engine=InnoDB [42001-224]
+2026-09-10 14:05:26.806358+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table interview_responses (id bigint not null auto_increment, ai_critique LONGTEXT, answered_at datetime(6), areas_to_improve LONGTEXT, audio_duration_sec integer, communication_score float(53), confidence_score float(53), eye_contact_percentage float(53), filler_count integer, ideal_model_answer LONGTEXT, key_strengths LONGTEXT, posture_score float(53), score float(53), student_answer_text LONGTEXT, technical_score float(53), words_per_minute integer, question_id bigint not null, primary key (id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table interview_responses (id bigint not null auto_increment, ai_critique LONGTEXT, answered_at datetime(6), areas_to_improve LONGTEXT, audio_duration_sec integer, communication_score float(53), confidence_score float(53), eye_contact_percentage float(53), filler_count integer, ideal_model_answer LONGTEXT, key_strengths LONGTEXT, posture_score float(53), score float(53), student_answer_text LONGTEXT, technical_score float(53), words_per_minute integer, question_id bigint not null, primary key (id)) engine=InnoDB [42001-224]
+2026-09-10 14:05:26.812363+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table interviews (id bigint not null auto_increment, category enum ('BEHAVIORAL','HR','MIXED','TECHNICAL') not null, communication_score float(53), completed_at datetime(6), confidence_score float(53), created_at datetime(6), difficulty enum ('EASY','HARD','MEDIUM') not null, feedback_summary LONGTEXT, improvements LONGTEXT, overall_score float(53), placement_readiness varchar(255), question_count integer, role_target varchar(255), status enum ('COMPLETED','IN_PROGRESS','PENDING') not null, strengths LONGTEXT, technical_score float(53), title varchar(255) not null, user_id bigint not null, primary key (id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table interviews (id bigint not null auto_increment, category enum ('BEHAVIORAL','HR','MIXED','TECHNICAL') not null, communication_score float(53), completed_at datetime(6), confidence_score float(53), created_at datetime(6), difficulty enum ('EASY','HARD','MEDIUM') not null, feedback_summary LONGTEXT, improvements LONGTEXT, overall_score float(53), placement_readiness varchar(255), question_count integer, role_target varchar(255), status enum ('COMPLETED','IN_PROGRESS','PENDING') not null, strengths LONGTEXT, technical_score float(53), title varchar(255) not null, user_id bigint not null, primary key (id)) engine=InnoDB [42001-224]
+2026-09-10 14:05:26.819347+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "INTERVIEW_RESPONSES" not found (this database is empty); SQL statement:
+alter table interview_responses drop index UK9vikdh93as32oy439wm1uch84 [42104-224]
+2026-09-10 14:05:26.821059+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "INTERVIEW_RESPONSES" not found; SQL statement:
+alter table interview_responses add constraint UK9vikdh93as32oy439wm1uch84 unique (question_id) [42102-224]
+2026-09-10 14:05:26.821599+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "INTERVIEW_QUESTIONS" not found; SQL statement:
+alter table interview_questions add constraint FK3dw8ec8nqxk4sv9gup5pk9sqs foreign key (interview_id) references interviews (id) [42102-224]
+2026-09-10 14:05:26.826458+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "INTERVIEW_RESPONSES" not found; SQL statement:
+alter table interview_responses add constraint FK5w9g4f9wabpxiku30wkhg3qyk foreign key (question_id) references interview_questions (id) [42102-224]
+2026-09-10 14:05:26.830979+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "INTERVIEWS" not found; SQL statement:
+alter table interviews add constraint FK5e4rxgf88qk96qk90lgngxrd0 foreign key (user_id) references users (id) [42102-224]
+2026-09-10 14:05:29.257242+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+select u1_0.id from users u1_0 where u1_0.email=? limit ? [42104-224]
