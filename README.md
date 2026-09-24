@@ -1,3 +1,4 @@
+git checkout --ours README.md<<<<<<< HEAD
 # AI Interview Preparation & Evaluation Platform 🎯🎙️
 
 An AI-powered full-stack web platform designed to help college students prepare with confidence for campus placements and technical interviews. It conducts real-time mock interviews using live camera and microphone, continuously evaluating what the candidate said (LLM answer quality), how they said it (speech speed & filler words), and how they presented themselves (MediaPipe non-verbal body language and eye contact).
@@ -81,3 +82,6 @@ The frontend application will be live at `http://localhost:5173`.
    - **Radar Competency Chart**: 5-pillar breakdown across Technical Accuracy, Eye Contact, Verbal Fluency, Posture, and Confidence.
    - **Question-by-Question Deep Dive**: Side-by-side comparison of candidate answer transcript, AI suggested ideal answer, and key strengths.
    - **Printable Report**: Export or print as PDF for placement cell review.
+=======
+# AI-Interview_Platform
+>>>>>>> 084b826182d60caaa444c400a068a4ca400e7e62
